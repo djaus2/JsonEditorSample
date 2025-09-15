@@ -39,9 +39,14 @@ As per this validation code:
     }
 ```
 
-Load a one level jason file.
-You can edit an node value by entrering any valid _(as above)_ C# string for the value for a node.
+Load a one level json file.
+You can edit any node value by entering any valid _(as above)_ C# string for the value for a node.
 - Node Names can't be changed.
 - You can't add nodes.
 
 > No validation against the loaded data type so on edutting a node value you can change the data type.
+
+
+##  Development
+
+Was developed with a little help from AI: GitHub Copilot and ChatGPT.
