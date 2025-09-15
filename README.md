@@ -52,4 +52,4 @@ You can edit any node value by entering any valid _(as above)_ C# string for the
 Was developed with a little help from AI: GitHub Copilot and ChatGPT. 
 Was developed with a view to adding a Json Editor as a popup control to a WPF application.
 With that, ended up as a fixed set of name:value pairs with fixed data types.
-_(This is a more general purpose editor.)_ The derived code is working. See [JsonEditorWindows.xaml/.cs](https://github.com/djaus2/PhotoTimingDjaus/tree/master/AthStitcher) in that project
+_(This is a more general purpose editor.)_ The derived code is working. See ```JsonEditorWindows.xaml/.cs``` [in this project](https://github.com/djaus2/PhotoTimingDjaus/tree/master/AthStitcher),
