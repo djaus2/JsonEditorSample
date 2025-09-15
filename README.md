@@ -1,1 +1,47 @@
 # JsonEditorSample
+
+## About
+A Simple one level Json File Editor.
+
+- Properties with scalar values. _Name:Value pairs._
+- No Schema required.
+- Number of properties is not fixed.
+
+**One Level** means the file has a comma separated list of name value pairs where the values are scalar 
+_(have a single value)_. 
+
+## Valid Data Types
+
+Integer,Float/Double, Boolean or Date/DateTime. No enum types.
+
+As per this validation code: 
+
+```cs
+    private void ValidateValue()
+    {
+        try
+        {
+            IsValid = ExpectedType switch
+            {
+                JTokenType.Integer => int.TryParse(Value, out _),
+                JTokenType.Float => double.TryParse(Value, out _),
+                JTokenType.Boolean => bool.TryParse(Value, out _),
+                JTokenType.Date => System.DateTime.TryParse(Value, out _),
+                _ => true
+            };
+        }
+        catch
+        {
+            IsValid = false;
+        }
+
+        OnPropertyChanged(nameof(IsValid));
+    }
+```
+
+Load a one level jason file.
+You can edit an node value by entrering any valid _(as above)_ C# string for the value for a node.
+- Node Names can't be changed.
+- You can't add nodes.
+
+> No validation against the loaded data type so on edutting a node value you can change the data type.
